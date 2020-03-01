@@ -16,11 +16,12 @@ install_project(){
 }
 
 lint(){
-    if [ ! -z $INPUT_SHOULD_LINT]; then
+    if [ $INPUT_SHOULD_LINT ]; then
         kedro lint
     fi
 }
 
+install_python_version
 install_kedro
 install_project
 lint
