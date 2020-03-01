@@ -20,3 +20,7 @@ lint(){
         kedro lint
     fi
 }
+
+install_kedro
+install_project
+lint
