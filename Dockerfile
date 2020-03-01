@@ -1,5 +1,14 @@
 FROM python:3
 
+LABEL "com.github.actions.name"="Kedro"
+LABEL "com.github.actions.description"="A Github Action to run kedro commands"
+LABEL "com.github.actions.icon"="layers"
+LABEL "com.github.actions.color"="black"
+
+LABEL "repository"="http://github.com/WaylonWalker/kedro-action"
+LABEL "maintainer"="Waylon Walker <waylon@waylonwalker.com>"
+
+
 RUN apt-get update
 RUN apt-get install -y jq
 
