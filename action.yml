@@ -1,6 +1,6 @@
-name: py-package-publish
-author: Mariam Maarouf
-description: Package and publish Python modules.
+name: kedro
+author: Waylon Walker
+description: Run kedro project
 inputs:
 python_version:
     description: a Python version that is supported by pyenv
