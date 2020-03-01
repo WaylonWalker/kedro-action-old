@@ -1,0 +1,30 @@
+name: py-package-publish
+author: Mariam Maarouf
+description: Package and publish Python modules.
+inputs:
+  python_version:
+    description: a Python version that is supported by pyenv
+    default: '3.7.0'
+  should_lint:
+    default: true
+  should_test:
+    default: true
+  should_build_docs:
+    default: true
+  should_package:
+    default: true
+  should_run:
+    default: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.python_version }}
+    - ${{ inputs.should_lint }}
+    - ${{ inputs.should_test }}
+    - ${{ inputs.should_build_docs }}
+    - ${{ inputs.should_package }}
+    - ${{ inputs.should_run }}
+branding:
+  icon: 'package'
+  color: 'black'
